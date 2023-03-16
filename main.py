@@ -1,3 +1,5 @@
+print("Hi")
+
 def fun():
     global y, x
     while True:
