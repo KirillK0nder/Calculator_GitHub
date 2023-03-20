@@ -2,7 +2,7 @@ def fun():
     global y, x
     while True:
 
-        data = input("Введите пример: ").split(" ")  # пользователь вводит данные
+        data = input("Введите пример: ").split(" ")  # пользователь вводит данные/
 
         if len(data) != 3:
             return "Каждый символ разделяется пробелом!"
@@ -25,7 +25,7 @@ def fun():
         elif operation == "*" or operation == "x" or operation == "X":
             print(x * y)
 
-        elif operation == "/" or operation == ":" :
+        elif operation == "/" or operation == ":":
             print(x / y)
 
         else:
