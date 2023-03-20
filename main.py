@@ -1,34 +1,34 @@
 def fun():
-    global y, x
-    while True:
+    global y, x  # эти переменные глобальные потому что используются только в блоке try
+    while True: # цикла нужен для того чтобы программа работала бесконечно
 
-        data = input("Введите пример: ").split(" ")  # пользователь вводит данные/
+        data = input("Введите пример: ").split(" ")  # пользователь вводит данные
 
-        if len(data) != 3:
+        if len(data) != 3:  # проверяем если не равна 3 символом(элементы написанные слитно один символ)
             return "Каждый символ разделяется пробелом!"
 
         try:
 
-            x = int(data[0])
-            y = int(data[-1])
-        except Exception:  # проверка ошибки(Если в строке есть буква)
+            x = int(data[0]) # пытаемся первый элемент(x) конкатенировать в тип данных int
+            y = int(data[-1]) # пытаемся второй элемент(y) конкатенировать в тип данных int
+        except Exception:  # проверка ошибки(Если в x или y есть буква)
             return "Калькулятор обрабатывает только числа"
 
-        operation = data[1]
+        operation = data[1] # записываем первый элемент нашей строки в переменную (которую будем сравнивать с другими операндами)
 
-        if operation == "+":
+        if operation == "+": # сравниваем переменную operation
             print(x + y)
 
-        elif operation == "-":
+        elif operation == "-": # сравниваем переменную operation
             print(x - y)
 
-        elif operation == "*" or operation == "x" or operation == "X":
+        elif operation == "*" or operation == "x" or operation == "X": # сравниваем переменную operation
             print(x * y)
 
-        elif operation == "/" or operation == ":":
+        elif operation == "/" or operation == ":": # сравниваем переменную operation
             print(x / y)
 
-        else:
+        else: # если такого оператора нет
             print("Нет такого операнда!")
 
 
